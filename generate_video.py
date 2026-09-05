@@ -120,6 +120,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     print(f"Frames: {NUM_FRAMES} at {FPS} FPS ({(NUM_FRAMES - 1) / FPS:.1f}s)")
     print(f"Inference steps: {NUM_INFERENCE_STEPS}")
     print(f"Guidance scale: {GUIDANCE_SCALE}")
+    print("Memory mode: model CPU offload")
 
     print("Loading model...", flush=True)
     model_load_started = time.perf_counter()
@@ -133,7 +134,7 @@ def main(argv: Sequence[str] | None = None) -> None:
         vae=vae,
         dtype=torch.bfloat16,
     )
-    pipeline.to(device)
+    pipeline.enable_model_cpu_offload(device="cuda")
     torch.cuda.synchronize(device)
     model_load_seconds = time.perf_counter() - model_load_started
 
