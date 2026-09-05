@@ -16,6 +16,25 @@ generation, LoRA training, face refinement, lip sync, voice, scenes, shots,
 sequencing, job orchestration, and a web UI. Do not build these until an
 iteration specifically calls for them.
 
+## Development Documentation
+
+Use `dev-docs/` as durable working context shared across development sessions.
+At the beginning of a session, list the directory and read `dev-docs/001.md`,
+the latest applicable handoff, and any documents relevant to the current topic
+before proposing substantial work.
+
+Documents may follow a numbered sequence for chronological sessions or
+iterations, such as `002.md` and `003.md`, or use descriptive one-off names for
+specific investigations and decisions. A strict numbering scheme is not
+required; prefer filenames that make the intended context easy to find.
+
+When updating or creating a handoff, record confirmed decisions, completed
+work, important paths and commands, observed results, unresolved issues, and
+the exact next checkpoint. Clearly distinguish completed work from planned
+work. Do not include credentials, private images, generated private media, or
+other secrets. These documents supplement the code and Git history rather than
+replacing them.
+
 ## Current Technical Direction
 
 - Use Python 3.11 and `uv` for dependencies and commands.
