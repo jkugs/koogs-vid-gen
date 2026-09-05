@@ -3,5 +3,14 @@ name = "koogs-vid-gen"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "accelerate>=1.14.0",
+    "diffusers>=0.40.0",
+    "ftfy>=6.3.1",
+    "imageio[ffmpeg]>=2.37.4",
+    "pillow>=12.3.0",
+    "torch>=2.14.0",
+    "torchvision>=0.29.0",
+    "transformers>=5.16.1",
+]
