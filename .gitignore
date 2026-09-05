@@ -7,4 +7,23 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv/
+.uv-cache/
+
+# Local caches and downloaded model weights
+.cache/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Personal source images
+inputs/*
+!inputs/.gitkeep
+
+# Generated media
+outputs/*
+!outputs/.gitkeep
+*.mp4
+*.mov
+*.webm
